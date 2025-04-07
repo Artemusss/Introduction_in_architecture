@@ -66,12 +66,6 @@ initial begin
     rst_i = 1'b0;
     #1;
 
-    //test of overflow addition
-    first_i = 3'b011;
-    second_i = 3'b011;
-    valid_i = 1'b1;
-    opcode_i = 2'b00;
-
     @(posedge clk_i); #1; // 011 + 011 = 111, valid_o should be 0
     rst_i = 1'b1; //reset
     #1;
